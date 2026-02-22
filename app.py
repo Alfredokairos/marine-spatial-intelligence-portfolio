@@ -4,6 +4,30 @@ st.set_page_config(
     page_title="Luis Alfredo Carrillo | Marine Spatial Intelligence Specialist",
     layout="wide"
 )
+st.markdown("""
+<style>
+
+/* Oculta el icono original */
+button[data-testid="collapsedControl"] svg {
+    display: none;
+}
+
+/* Agrega el icono hamburguesa */
+button[data-testid="collapsedControl"]::before {
+    content: "☰";
+    font-size: 22px;
+}
+
+/* Agrega texto debajo */
+button[data-testid="collapsedControl"]::after {
+    content: " Menú";
+    font-size: 14px;
+    display: block;
+    margin-top: -2px;
+}
+
+</style>
+""", unsafe_allow_html=True)
 
 st.sidebar.markdown("## ☰")
 st.sidebar.markdown("Menú")
