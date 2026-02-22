@@ -95,7 +95,6 @@ elif pagina == "Climatologías":
     """)
     
 elif pagina == "Mapas interactivos":
-    st.title("Mapas interactivos")
     st.title("🗺 Mapas Interactivos de Conservación")
 
     st.header("El Problema")
@@ -109,6 +108,10 @@ elif pagina == "Mapas interactivos":
 
     with open("data/Temporada por especie.html", "r", encoding="utf-8") as f:
         html_map = f.read()
+    html_map = html_map.replace(
+        "scrollWheelZoom: true",
+        "scrollWheelZoom: false"
+    )
 
     components.html(html_map, height=450)
 
