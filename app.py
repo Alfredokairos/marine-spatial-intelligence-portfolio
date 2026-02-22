@@ -8,17 +8,12 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-/* Agrandar texto de opciones del radio */
-div[role="radiogroup"] label {
-    font-size: 20px !important;
-    font-weight: 600;
+
+div[data-baseweb="radio"] div {
+    font-size: 22px !important;
+    font-weight: 600 !important;
 }
 
-/* Agrandar título "☰ Menú" */
-div[role="radiogroup"] > label {
-    font-size: 22px !important;
-    font-weight: 700;
-}
 </style>
 """, unsafe_allow_html=True)
 
