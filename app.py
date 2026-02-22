@@ -110,7 +110,7 @@ elif pagina == "Mapas interactivos":
     with open("data/Temporada por especie.html", "r", encoding="utf-8") as f:
         html_map = f.read()
 
-    components.html(html_map, height=700, width=800)
+    components.html(html_map, height=450)
 
     st.subheader("Distribución espacial de pesca por arponeo")
 
