@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 
 st.set_page_config(
     page_title="Luis Alfredo Carrillo | Marine Spatial Intelligence Specialist",
@@ -35,7 +36,6 @@ if pagina == "Inicio":
     st.markdown("Comparación de cobertura coralina entre diciembre 2023 y febrero 2024 en el mismo parche arrecifal.")
 
     st.markdown("---")
-    st.markdown("Selecciona un proyecto en el menú lateral.")
  
 elif pagina == "Fotogrametría":
     st.title("🪸 Fotogrametría 3D de Arrecifes")
@@ -50,9 +50,9 @@ elif pagina == "Fotogrametría":
     st.header("La Solución Técnica")
 
     st.markdown("""
-    - Modelos 3D generados en Agisoft Metashape  
-    - Cálculo de rugosidad y mediciones estructurales  
-    - Análisis espacial en QGIS  
+    - Modelos 3D generados en Agisoft Metashape.  
+    - Cálculo de rugosidad y mediciones estructurales.  
+    - Análisis espacial en QGIS.  
     """)
 
     st.header("Modelo 3D / Imagen")
@@ -63,9 +63,9 @@ elif pagina == "Fotogrametría":
 
     st.markdown("""
     Permite:
-    - Medir cambios estructurales post-blanqueamiento
-    - Priorizar zonas de restauración
-    - Evaluar éxito de intervenciones
+    - Medir cambios estructurales post-blanqueamiento.
+    - Priorizar zonas de restauración.
+    - Evaluar éxito de intervenciones.
     """)
         
 elif pagina == "Climatologías":
@@ -105,24 +105,25 @@ elif pagina == "Mapas interactivos":
     """)
 
     st.subheader("Hotspot espaciales por especie") 
+    st.info("🗂️ Selecciona una especie en el ícono de capas (arriba a la derecha del mapa).")
 
     with open("data/Temporada por especie.html", "r", encoding="utf-8") as f:
         html_map = f.read()
 
-    components.html(html_map, height=700, width=700)
+    components.html(html_map, height=700, width=800)
 
     st.subheader("Distribución espacial de pesca por arponeo")
 
     with open("data/pesca.html", "r", encoding="utf-8") as f:
         html_map = f.read()
 
-    components.html(html_map, height=700, width=1000)
+    components.html(html_map, height=700, width=800)
 
     st.header("Aplicación")
 
     st.markdown("""
-    - Visualización de incidentes
-    - Monitoreo de fauna
-    - Planeación espacial marina
+    - Visualización de incidentes.
+    - Monitoreo de fauna.
+    - Planeación espacial marina.
     """)
     
