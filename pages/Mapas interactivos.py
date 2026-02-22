@@ -14,7 +14,7 @@ st.subheader("Hotspot espaciales por especie")
 with open("data/Temporada por especie.html", "r", encoding="utf-8") as f:
     html_map = f.read()
 
-components.html(html_map, height=700, width=1000)
+components.html(html_map, height=700, width=700)
 
 st.subheader("Distribución espacial de pesca por arponeo")
 

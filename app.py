@@ -5,6 +5,9 @@ st.set_page_config(
     layout="wide"
 )
 
+st.sidebar.markdown("## ☰")
+st.sidebar.markdown("Menú")
+
 st.title("🌊 Marine Spatial Intelligence Portfolio")
 st.subheader("M en C. Luis Alfredo Carrillo Aguilar")
 st.markdown("""
