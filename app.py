@@ -5,6 +5,23 @@ st.set_page_config(
     page_title="Luis Alfredo Carrillo | Marine Spatial Intelligence Specialist",
     layout="wide"
 )
+
+st.markdown("""
+<style>
+/* Agrandar texto de opciones del radio */
+div[role="radiogroup"] label {
+    font-size: 20px !important;
+    font-weight: 600;
+}
+
+/* Agrandar título "☰ Menú" */
+div[role="radiogroup"] > label {
+    font-size: 22px !important;
+    font-weight: 700;
+}
+</style>
+""", unsafe_allow_html=True)
+
 pagina = st.radio(
     "☰ Menú",
     ["Inicio", "Climatologías", "Fotogrametría", "Mapas interactivos"],
@@ -120,7 +137,7 @@ elif pagina == "Mapas interactivos":
     with open("data/pesca.html", "r", encoding="utf-8") as f:
         html_map = f.read()
 
-    components.html(html_map, height=700, width=800)
+    components.html(html_map, height=450)
 
     st.header("Aplicación")
 
