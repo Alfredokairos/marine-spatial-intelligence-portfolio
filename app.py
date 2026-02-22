@@ -6,7 +6,7 @@ st.set_page_config(
     layout="wide"
 )
 
-col1, col2, col3, col4 = st.columns(4)
+
 
 pagina = st.radio(
     "☰ Menú",
@@ -14,33 +14,32 @@ pagina = st.radio(
     horizontal=True
 )
 st.divider()
-with col1:
-    if st.button("Inicio"):
-    if pagina == "Inicio":
-        st.title("🌊 Marine Spatial Intelligence Portfolio")
-        st.subheader("M en C. Luis Alfredo Carrillo Aguilar")
+
+if pagina == "Inicio":
+    st.title("🌊 Marine Spatial Intelligence Portfolio")
+    st.subheader("M en C. Luis Alfredo Carrillo Aguilar")
     st.markdown("""
-        correo: raya.torpedo@gmail.com
+    correo: raya.torpedo@gmail.com
 
-        celular: 6121072580
-        """)
-        with open("CV_Luis_Alfredo_Carrillo_2026.pdf", "rb") as file:
-            st.download_button(
-                label="Descargar CV",
-                data=file,
-                file_name="CV_Luis_Alfredo_Carrillo_2026.pdf",
-                mime="application/pdf")
-        st.markdown("""
-        Especialista en análisis espacial marino, fotogrametría 3D y modelado ambiental aplicado a conservación.
+    celular: 6121072580
+    """)
+    with open("CV_Luis_Alfredo_Carrillo_2026.pdf", "rb") as file:
+        st.download_button(
+            label="Descargar CV",
+            data=file,
+            file_name="CV_Luis_Alfredo_Carrillo_2026.pdf",
+            mime="application/pdf")
+    st.markdown("""
+    Especialista en análisis espacial marino, fotogrametría 3D y modelado ambiental aplicado a conservación.
 
-        Este portafolio muestra herramientas interactivas desarrolladas para apoyar la toma de decisiones en conservación marina.
-        """)
+    Este portafolio muestra herramientas interactivas desarrolladas para apoyar la toma de decisiones en conservación marina.
+    """)
 
 #st.image("D:/Users/User/Desktop/2026/Portafolio/assets/mapa_3d.png", use_container_width=True)
-        st.video("assets/comparacion_mapas_final.mp4")
-        st.markdown("Comparación de cobertura coralina entre diciembre 2023 y febrero 2024 en el mismo parche arrecifal.")
+    st.video("assets/comparacion_mapas_final.mp4")
+    st.markdown("Comparación de cobertura coralina entre diciembre 2023 y febrero 2024 en el mismo parche arrecifal.")
 
-        st.markdown("---")
+    st.markdown("---")
  
 elif pagina == "Fotogrametría":
     st.title("🪸 Fotogrametría 3D de Arrecifes")
@@ -113,10 +112,7 @@ elif pagina == "Mapas interactivos":
 
     with open("data/Temporada por especie.html", "r", encoding="utf-8") as f:
         html_map = f.read()
-    html_map = html_map.replace(
-        "scrollWheelZoom: true",
-        "scrollWheelZoom: false"
-    )
+
 
     components.html(html_map, height=450)
 
