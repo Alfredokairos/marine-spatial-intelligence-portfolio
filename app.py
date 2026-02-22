@@ -8,22 +8,14 @@ st.markdown("""
 <style>
 
 /* Oculta el icono original */
-button[data-testid="collapsedControl"] svg {
-    display: none;
+button[kind="header"] svg {
+    display: none !important;
 }
 
 /* Agrega el icono hamburguesa */
-button[data-testid="collapsedControl"]::before {
-    content: "☰";
-    font-size: 22px;
-}
-
-/* Agrega texto debajo */
-button[data-testid="collapsedControl"]::after {
-    content: " Menú";
-    font-size: 14px;
-    display: block;
-    margin-top: -2px;
+button[kind="header"]::before {
+    content: "☰ Menú";
+    font-size: 18px;
 }
 
 </style>
