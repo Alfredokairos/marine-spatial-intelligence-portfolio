@@ -10,7 +10,7 @@ st.set_page_config(
 
 pagina = st.radio(
     "☰ Menú",
-    ["Inicio", "Climatologías", "Fotogrametría", "Mapas interactivos"],
+    ["Inicio", "Climatologías", "Fotogrametría", "Mapas interactivos", "Datos satelitales"],
     horizontal=True
 )
 st.divider()
@@ -130,4 +130,32 @@ elif pagina == "Mapas interactivos":
     - Monitoreo de fauna.
     - Planeación espacial marina.
     """)
+    
+elif pagina == "Datos satelitales":
+    st.title("🛰️🌍 Monitoreo satelital ambiental")
+    
+    st.header("El problema")
+    
+    st.markdown("""
+    Los mapas estáticos muestran condiciones ambientales en un momento específico, 
+    pero no permiten evaluar tendencias, variabilidad temporal ni detectar cambios progresivos.
+
+    La toma de decisiones en conservación requiere análisis temporal para identificar 
+    patrones, anomalías y procesos acumulativos que no son visibles en una sola imagen.
+    """)
+    
+    st.subheader("Serie de tiempo de Índice de vegetación")
+    st.video("https://www.youtube.com/watch?v=3IW6P_dvERQ")
+    
+    st.header("Aplicación")
+    
+    st.markdown("""
+    - Monitoreo de tendencias en productividad primaria (NDVI).
+    - Detección de cambios en cobertura vegetal.
+    - Identificación de cuerpos de agua y su dinámica temporal.
+    - Evaluación de riesgo de inundaciones mediante análisis multitemporal.
+    - Detección temprana de eventos de degradación ambiental.
+    """) 
+    
+    
     
