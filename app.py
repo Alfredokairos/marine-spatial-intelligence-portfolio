@@ -138,10 +138,10 @@ elif pagina == "Datos satelitales":
     
     st.markdown("""
     Los mapas estáticos muestran condiciones ambientales en un momento específico, 
-    pero no permiten evaluar tendencias, variabilidad temporal ni detectar cambios progresivos.
+    pero no permiten evaluar variabilidad temporal ni detectar cambios progresivos.
 
     La toma de decisiones en conservación requiere análisis temporal para identificar 
-    patrones, anomalías y procesos acumulativos que no son visibles en una sola imagen.
+    patrones, anomalías y procesos que no son visibles en una sola imagen.
     """)
     
     st.subheader("Serie de tiempo de Índice de vegetación")
